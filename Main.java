@@ -31,9 +31,19 @@ public class Main {
     public static void main(String[] args) throws NoSuchAlgorithmException {
         if(args.length<3 || args.length%2==0){
             System.out.println("Wrong input");
-            System.out.println("You need to input odd number of elements and there amount must be more than 3");
+            System.out.println("You need to input odd number of unique elements and there amount must be more than 2");
             System.out.println("Examples:\n1) 1 2 3\n2) rock paper scissors lizard Spock");
             return;
+        }
+        for(int i=0;i<args.length;i++){
+            for(int b=i+1;b<args.length;b++){
+                if(args[i]==args[b]){
+                    System.out.println("Wrong input");
+                    System.out.println("You need to input odd number of unique elements and there amount must be more than 2");
+                    System.out.println("Examples:\n1) 1 2 3\n2) rock paper scissors lizard Spock");
+                    return;
+                }
+            }
         }
         SecureRandom random = new SecureRandom();
         byte[] bytes = new byte[16];
