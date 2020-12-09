@@ -71,11 +71,12 @@ public class Main {
                 sc.next();
             }
             person = sc.nextInt();
-        } while (person < 0 || person>=args.length);
+        } while (person < 0 || person>args.length);
         if(person==0)
             return;
         System.out.println("Your move: "+args[person-1]);
         System.out.println("Computer move: "+args[computer]);
+        computer++;
         if(person==computer)
             System.out.println("Draw!");
         else if(computer>person) {
