@@ -37,7 +37,7 @@ public class Main {
         }
         for(int i=0;i<args.length;i++){
             for(int b=i+1;b<args.length;b++){
-                if(args[i]==args[b]){
+                if(args[i].equals(args[b])){
                     System.out.println("Wrong input");
                     System.out.println("You need to input odd number of unique elements and there amount must be more than 2");
                     System.out.println("Examples:\n1) 1 2 3\n2) rock paper scissors lizard Spock");
